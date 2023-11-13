@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="dist/index.js" defer></script>
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="application">
+        <article class="container">
+          <div class="header-container">
+            <div class="input-container">
+              <p class="input-title" id="day-title">Day</p>
+              <div class="input-cover day-cover">
+                <input
+                  type="number"
+                  id="get-day"
+                  class="day-input"
+                  placeholder="DD"
+                />
+              </div>
+              <p class="tag-error day-error"></p>
+            </div>
+
+            <div class="input-container">
+              <p class="input-title" id="month-title">Month</p>
+              <div class="input-cover month-cover">
+                <input
+                  type="number"
+                  id="get-month"
+                  class="month-input"
+                  placeholder="MM"
+                />
+              </div>
+              <p class="tag-error month-error"></p>
+            </div>
+
+            <div class="input-container">
+              <p class="input-title" id="year-title">Year</p>
+              <div class="input-cover year-cover">
+                <input
+                  type="number"
+                  id="get-year"
+                  class="year-input"
+                  placeholder="YYYY"
+                />
+              </div>
+              <p class="tag-error year-error"></p>
+            </div>
+          </div>
+          <div class="img-container">
+            <button class="mobile-btn" id="mobile-submit">
+              <img
+                src="assets/images/icon-arrow.svg"
+                alt="Submit"
+                class="mobile-img"
+              />
+            </button>
+            <button class="desktop-btn" id="desktop-submit">
+              <img
+                src="assets/images/icon-arrow.svg"
+                alt="Submit"
+                class="desktop-img"
+              />
+            </button>
+          </div>
+          <div class="footer-container">
+            <div class="year-container">
+              <p class="show-year"><span id="year-value">--</span>years</p>
+            </div>
+            <div class="month-container">
+              <p class="show-month"><span id="month-value">--</span>months</p>
+            </div>
+            <div class="day-container">
+              <p class="show-day"><span id="day-value">--</span>days</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer-forced">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Muhammad Desai</a>.
+      </div>
+    </footer>
+  </body>
+</html>
