@@ -26,6 +26,8 @@ const dayValue = document.getElementById("day-value");
 // Get the current date and store into three variables
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
+const currentMonth = currentDate.getMonth();
+const currentDay = currentDate.getDay();
 
 // Variable for the button
 const mobileBtn = document.getElementById("mobile-submit");
@@ -75,7 +77,7 @@ mobileBtn?.addEventListener("click", (e) => {
         dayTitle?.classList.remove("error-title");
         let dayValueElement = document.getElementById("day-value");
         if (dayValueElement) {
-          const displayDay = 31 - userDay;
+          const displayDay = userDay - currentDay;
           showDay = displayDay;
         }
       }
@@ -120,7 +122,7 @@ mobileBtn?.addEventListener("click", (e) => {
         monthTitle?.classList.remove("error-title");
         let monthValueElement = document.getElementById("month-value");
         if (monthValueElement) {
-          const displayMonth = 12 - userMonth;
+          const displayMonth = currentMonth - userMonth;
           showMonth = displayMonth;
         }
       }
@@ -221,7 +223,7 @@ desktopBtn?.addEventListener("click", (e) => {
         dayTitle?.classList.remove("error-title");
         let dayValueElement = document.getElementById("day-value");
         if (dayValueElement) {
-          const displayDay = 31 - userDay;
+          const displayDay = userDay - currentDay;
           showDay = displayDay;
         }
       }
@@ -266,7 +268,7 @@ desktopBtn?.addEventListener("click", (e) => {
         monthTitle?.classList.remove("error-title");
         let monthValueElement = document.getElementById("month-value");
         if (monthValueElement) {
-          const displayMonth = 12 - userMonth;
+          const displayMonth = currentMonth - userMonth;
           showMonth = displayMonth;
         }
       }

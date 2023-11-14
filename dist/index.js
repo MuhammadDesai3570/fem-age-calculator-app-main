@@ -16,6 +16,8 @@ const monthValue = document.getElementById("month-value");
 const dayValue = document.getElementById("day-value");
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
+const currentMonth = currentDate.getMonth();
+const currentDay = currentDate.getDay();
 const mobileBtn = document.getElementById("mobile-submit");
 const desktopBtn = document.getElementById("desktop-submit");
 let showDay;
@@ -61,7 +63,7 @@ mobileBtn === null || mobileBtn === void 0 ? void 0 : mobileBtn.addEventListener
                 dayTitle === null || dayTitle === void 0 ? void 0 : dayTitle.classList.remove("error-title");
                 let dayValueElement = document.getElementById("day-value");
                 if (dayValueElement) {
-                    const displayDay = 31 - userDay;
+                    const displayDay = userDay - currentDay;
                     showDay = displayDay;
                 }
             }
@@ -105,7 +107,7 @@ mobileBtn === null || mobileBtn === void 0 ? void 0 : mobileBtn.addEventListener
                 monthTitle === null || monthTitle === void 0 ? void 0 : monthTitle.classList.remove("error-title");
                 let monthValueElement = document.getElementById("month-value");
                 if (monthValueElement) {
-                    const displayMonth = 12 - userMonth;
+                    const displayMonth = currentMonth - userMonth;
                     showMonth = displayMonth;
                 }
             }
@@ -201,7 +203,7 @@ desktopBtn === null || desktopBtn === void 0 ? void 0 : desktopBtn.addEventListe
                 dayTitle === null || dayTitle === void 0 ? void 0 : dayTitle.classList.remove("error-title");
                 let dayValueElement = document.getElementById("day-value");
                 if (dayValueElement) {
-                    const displayDay = 31 - userDay;
+                    const displayDay = userDay - currentDay;
                     showDay = displayDay;
                 }
             }
@@ -245,7 +247,7 @@ desktopBtn === null || desktopBtn === void 0 ? void 0 : desktopBtn.addEventListe
                 monthTitle === null || monthTitle === void 0 ? void 0 : monthTitle.classList.remove("error-title");
                 let monthValueElement = document.getElementById("month-value");
                 if (monthValueElement) {
-                    const displayMonth = 12 - userMonth;
+                    const displayMonth = currentMonth - userMonth;
                     showMonth = displayMonth;
                 }
             }
